@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Hub</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-soft: #0b0b0b;
+      --gold-1: #ffd36a;
+      --gold-2: #ffbf3f;
+      --gold-3: #cfa335;
+      --text: #f5f5f5;
+      --muted: #9b9b9b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(1200px 600px at top, #1a1405, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ===== NAVBAR ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(5, 5, 5, 0.75);
+      border-bottom: 1px solid rgba(255, 215, 100, 0.1);
+    }
+
+    .nav {
+      max-width: 1300px;
+      margin: auto;
+      padding: 18px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      background: linear-gradient(120deg, var(--gold-1), var(--gold-2), var(--gold-1));
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 4s linear infinite;
+    }
+
+    .nav button {
+      background: linear-gradient(135deg, var(--gold-2), var(--gold-3));
+      color: #000;
+      font-weight: 700;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(255, 200, 80, 0.35);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .nav button:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 0 45px rgba(255, 200, 80, 0.6);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      max-width: 1300px;
+      margin: auto;
+      padding: 90px 28px 60px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 18px;
+      background: linear-gradient(120deg, #fff, var(--gold-1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero .actions {
+      display: flex;
+      gap: 16px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+      color: #000;
+      font-weight: 800;
+      padding: 14px 26px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 35px rgba(255, 215, 100, 0.45);
+      transition: all .25s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 60px rgba(255, 215, 100, 0.8);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255, 215, 100, 0.4);
+      color: var(--gold-1);
+      padding: 14px 26px;
+      border-radius: 14px;
+      cursor: pointer;
+    }
+
+    /* ===== HERO VISUAL ===== */
+    .hero-card {
+      background: linear-gradient(180deg, #151007, #070707);
+      border-radius: 26px;
+      padding: 30px;
+      border: 1px solid rgba(255, 215, 100, 0.15);
+      box-shadow: inset 0 0 60px rgba(255, 215, 100, 0.08), 0 0 80px rgba(0,0,0,0.8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 40%, rgba(255,215,120,0.12), transparent 60%);
+      opacity: 0;
+      animation: statGlow 8s ease-in-out infinite;
+    }
+
+    .hero-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      color: var(--gold-1);
+    }
+
+    .stat {
+      opacity: 0;
+      transform: translateY(6px);
+      animation: statIn 0.6s ease forwards;
+    }
+
+    .stat:nth-child(2) { animation-delay: .1s; }
+    .stat:nth-child(3) { animation-delay: .25s; }
+    .stat:nth-child(4) { animation-delay: .4s; }
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      margin: 14px 0;
+      color: #ddd;
+    }
+      display: flex;
+      justify-content: space-between;
+      margin: 14px 0;
+      color: #ddd;
+    }
+
+    /* ===== GAMES ===== */
+    .section {
+      max-width: 1300px;
+      margin: auto;
+      padding: 70px 28px 90px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 36px;
+      background: linear-gradient(120deg, #fff, var(--gold-1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .game {
+      background: linear-gradient(180deg, #1a1306, #0a0a0a);
+      border-radius: 26px;
+      padding: 26px 22px 24px;
+      border: 1px solid rgba(255, 215, 100, 0.18);
+      transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .game::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(255,215,140,0.22), transparent 65%);
+      opacity: 0;
+      transition: opacity .35s ease;
+      pointer-events: none;
+    }
+
+    .game:hover {
+      transform: translateY(-10px) scale(1.035);
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.85),
+        0 0 70px rgba(255,215,120,.35);
+    }
+
+    .game:hover::before { opacity: 1; }
+
+    .game h4 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--gold-1);
+    }
+
+    .game p {
+      font-size: .95rem;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .game button {
+      width: 100%;
+      background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+      border: none;
+      padding: 12px;
+      font-weight: 800;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(255,215,120,.35);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .game button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0 45px rgba(255,215,120,.6);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      border-top: 1px solid rgba(255, 215, 100, 0.1);
+      padding: 26px;
+      text-align: center;
+      color: #777;
+      font-size: .9rem;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes shine {
+      to { background-position: 200% center; }
+    }
+
+    @keyframes statGlow {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes statIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+      100% { transform: translateX(50%) rotate(20deg); }
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="logo">GOLD HUB</div>
+      <a href="play.html"><button>Launch Games</button></a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Gold<br>Hub</h1>
+      <p>Gold Hub is the newest branch of Ore Games. Completely seperate and independent!</p>
+      <div class="actions">
+        <a href="play.html"><button class="btn-primary">Play Now</button></a>
+        <a href="play.html"><button class="btn-outline">Browse Games</button></a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Live Platform Stats</h3>
+      <div class="stat"><span>Games Available</span><strong>128</strong></div>
+      <div class="stat"><span>Players Online</span><strong>2,413</strong></div>
+      <div class="stat"><span>Uptime</span><strong>99.9%</strong></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <a href="play.html" style="text-decoration:none"><h2 style="text-align:center">Featured Games</h2></a>
+    <div class="games">
+      <div class="game">
+        <h4>Golden Run</h4>
+        <p>Fast‑paced endless runner.</p>
+        <a href="play.html"><button>Play</button></a>
+      </div>
+      <div class="game">
+        <h4>Treasure Clicker</h4>
+        <p>Idle gold‑stacking fun.</p>
+        <a href="play.html"><button>Play</button></a>
+      </div>
+      <div class="game">
+        <h4>Vault Escape</h4>
+        <p>Puzzle your way to riches.</p>
+        <a href="play.html"><button>Play</button></a>
+      </div>
+      <div class="game">
+        <h4>Gold Arena</h4>
+        <p>Competitive PvP battles.</p>
+        <a href="play.html"><button>Play</button></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Gold Hub. All rights reserved.
+  </footer>
+
+</body>
+</html>
