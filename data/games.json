@@ -150,6 +150,36 @@
     "description": "Game Active"
   },
   {
+    "name": "Bowmasters",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/0.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/0.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "A Small World Cup",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/435.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/435.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Tag",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/627.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/627.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "OvO",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/1.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/1.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Plants Vs Zombies",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/232.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/232.png",
+    "description": "Game Active"
+  },
+  {
     "name": "Gunspin",
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/91.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/91.png",
