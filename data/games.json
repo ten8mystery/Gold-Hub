@@ -180,15 +180,27 @@
     "description": "Game Active"
   },
   {
-    "name": "Five Nights at Freddys",
+    "name": "Five Nights at Freddy's",
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/38.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/38.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Five Nights at Freddy's 2",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/39.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/39.png",
     "description": "Game Active"
   },
   {
     "name": "House of Hazards",
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/339.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/339.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Bloons TD 3",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/73.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/73.png",
     "description": "Game Active"
   },
   {
@@ -204,9 +216,27 @@
     "description": "Game Active"
   },
   {
+    "name": "Drive Mad",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/35.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/35.png",
+    "description": "Game Active"
+  },
+  {
     "name": "Gunspin",
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/91.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/91.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Pokemon Emerald",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/506.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/506.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Pokemon Red",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/505.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/505.png",
     "description": "Game Active"
   }
 ]
