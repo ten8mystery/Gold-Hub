@@ -150,12 +150,6 @@
     "description": "Game Active"
   },
   {
-    "name": "Bowmasters",
-    "src": "https://raw.githubusercontent.com/feetlessfred/BowmastersGNMATHPORT/main/index.html",
-    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/0.png",
-    "description": "Game Active"
-  },
-  {
     "name": "A Small World Cup",
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/435.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/435.png",
@@ -171,12 +165,6 @@
     "name": "OvO",
     "src": "https://raw.githubusercontent.com/cannotbeblankt/ovo-game/main/index.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/1.png",
-    "description": "Game Active"
-  },
-  {
-    "name": "Plants Vs Zombies",
-    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/232.html",
-    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/232.png",
     "description": "Game Active"
   },
   {
