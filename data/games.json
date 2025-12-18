@@ -400,6 +400,18 @@
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/24.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/24.png",
     "description": "Game Active"
+  },
+  {
+    "name": "Sky Riders",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/576.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/576.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "DOOM",
+    "src": "https://raw.githubusercontent.com/ten8mystery/Diamond-Backend/refs/heads/main/DOOM.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/203.png",
+    "description": "Game Active"
   }
 ]
 
