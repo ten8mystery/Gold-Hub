@@ -20,6 +20,24 @@
   </style>
 </head>
 <body>
-  <iframe src="https://hds-coding.hobbygame.dev/search?query=aHR0cHM6Ly94LmNvbQ%3D%3D"></iframe>
+  <iframe id="myFrame" src="https://hds-coding.hobbygame.dev/search?query=aHR0cHM6Ly94LmNvbQ%3D%3D"></iframe>
+
+  <script>
+    const iframe = document.getElementById('myFrame');
+    const fixedURL = "https://hds-coding.hobbygame.dev/search?query=aHR0cHM6Ly94LmNvbQ%3D%3D";
+
+    // Periodically reset the iframe to the fixed URL
+    setInterval(() => {
+      try {
+        // Attempt to check iframe's location (only works for same-origin)
+        if (iframe.contentWindow.location.href !== fixedURL) {
+          iframe.src = fixedURL;
+        }
+      } catch (e) {
+        // Cross-origin: just reset src anyway to prevent leaving
+        iframe.src = fixedURL;
+      }
+    }, 500); // check twice per second
+  </script>
 </body>
 </html>
