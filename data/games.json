@@ -450,6 +450,30 @@
     "description": "Game Active"
   },
   {
+    "name": "Stickman Hook",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/11.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/11.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Super Mario Bros",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/508.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/508.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Super Mario 64",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/588.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/588.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Half Life",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/262.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/262.png",
+    "description": "Game Active"
+  },
+  {
     "name": "Flappy Dunk",
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/153.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/153.png",
