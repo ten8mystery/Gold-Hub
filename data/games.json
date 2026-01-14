@@ -610,6 +610,30 @@
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/423.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/423.png",
     "description": "Game Active"
+  },
+  {
+    "name": "Terraria",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/669.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/669.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Raldi's Crackhouse",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/670.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/670.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "We Become What We Behold",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/671.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/671.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Meatboy",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/689.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/689.png",
+    "description": "Game Active"
   }
 ]
 
