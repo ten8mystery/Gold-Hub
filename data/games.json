@@ -558,12 +558,6 @@
     "description": "Game Active"
   },
   {
-    "name": "Ragdoll Archers",
-    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/44.html",
-    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/44.png",
-    "description": "Game Active"
-  },
-  {
     "name": "Ragdoll Hit",
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/44.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/44.png",
@@ -633,6 +627,48 @@
     "name": "Meatboy",
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/689.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/689.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Fallout",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/585.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/585.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Pico's School",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/687.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/687.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Friday Night Funkin VS Imposter",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/608.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/608.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Friday Night Funkin VS Whitty",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/474.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/474.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Friday Night Funkin VS Garcello",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/485.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/485.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Friday Night Funkin': Hit Single Real",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/483.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/483.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "1v1.LoL",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/58.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/58.png",
     "description": "Game Active"
   }
 ]
