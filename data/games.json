@@ -760,6 +760,42 @@
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/448.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/448.png",
     "description": "Game Active"
+  },
+  {
+    "name": "Cookie Clicker",
+    "src": "https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/main/data/local/zones/Cookie%20Clicker.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/82.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Gobble",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/37.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/37.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Going Balls",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/662.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/662.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Football Bros",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/548.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/548.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Plinko",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/544.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/544.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Raft",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/457.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/457.png",
+    "description": "Game Active"
   }
 ]
 
