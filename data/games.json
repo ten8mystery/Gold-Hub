@@ -823,9 +823,15 @@
   },
   {
     "name": "Minesweeper Plus",
-    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/604.html",
+    "src": "https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/refs/heads/main/data/local/zones/msweepplus.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/604.png",
     "description": "Game Active"
-  }
+  },
+  {
+    "name": "Minesweeper Mania",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/313.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/313.png",
+    "description": "Game Active"
+  },
 ]
 
