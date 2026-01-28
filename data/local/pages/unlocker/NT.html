@@ -4,73 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>New Tab</title>
-
-  <script src="../config.js"></script>
-  <script src="../scripts/settings.js"></script>
-  <script src="../scripts/quotes.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-    :root {
-      /* Core colors */
-      --bg: #0a0a0a;
-      --surface: #0f0f0f;
-      --surface-hover: #1a1a1a;
-      --surface-active: #252525;
-      --border: #1f1f1f;
-      --border-light: #2a2a2a;
-
-      /* Text */
-      --text: #e4e4e7;
-      --text-muted: #71717a;
-      --text-dim: #52525b;
-
-      /* Accent */
-      --accent: #ffffff;
-      --accent-dim: rgba(255, 255, 255, 0.8);
-      --accent-glow: rgba(255, 255, 255, 0.1);
-
-      /* Status colors */
-      --success: #22c55e;
-      --warning: #f59e0b;
-      --error: #ef4444;
-      --info: #3b82f6;
-
-      /* Shadows */
-      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-      --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
-      --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
-
-      /* Spacing */
-      --space-xs: 4px;
-      --space-sm: 8px;
-      --space-md: 16px;
-      --space-lg: 24px;
-      --space-xl: 32px;
-      --space-2xl: 48px;
-
-      /* Border radius */
-      --radius-sm: 4px;
-      --radius-md: 8px;
-      --radius-lg: 12px;
-      --radius-xl: 16px;
-      --radius-full: 9999px;
-
-      /* Transitions */
-      --transition-fast: 0.1s ease;
-      --transition-normal: 0.2s ease;
-      --transition-slow: 0.3s ease;
-
-      /* Typography */
-      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-
-      /* Background */
-      --bg-image: none;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -79,8 +14,8 @@
 
     body {
       font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: #0a0a0a;
+      color: #e4e4e7;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -94,12 +29,12 @@
       font-weight: 600;
       letter-spacing: -2px;
       margin-bottom: 8px;
-      color: var(--accent);
+      color: #ffffff;
     }
 
     .date {
       font-size: 14px;
-      color: var(--text-muted);
+      color: #71717a;
       margin-bottom: 32px;
     }
 
@@ -107,8 +42,8 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: #0f0f0f;
+      border: 1px solid #1f1f1f;
       border-radius: 12px;
       padding: 12px 16px;
       width: 100%;
@@ -117,7 +52,7 @@
     }
 
     .search-box i {
-      color: var(--text-muted);
+      color: #71717a;
       font-size: 14px;
     }
 
@@ -126,20 +61,20 @@
       background: transparent;
       border: none;
       outline: none;
-      color: var(--text);
+      color: #e4e4e7;
       font-size: 14px;
       font-family: inherit;
     }
 
     .search-box input::placeholder {
-      color: var(--text-dim);
+      color: #52525b;
     }
 
     .search-box select {
-      background: var(--surface-hover);
+      background: #1a1a1a;
       border: none;
       border-radius: 6px;
-      color: var(--text-muted);
+      color: #71717a;
       padding: 6px 10px;
       font-size: 12px;
       cursor: pointer;
@@ -166,8 +101,8 @@
     .shortcut-icon {
       width: 52px;
       height: 52px;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: #0f0f0f;
+      border: 1px solid #1f1f1f;
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -176,7 +111,7 @@
     }
 
     .shortcut:hover .shortcut-icon {
-      background: var(--surface-hover);
+      background: #1a1a1a;
       transform: translateY(-2px);
     }
 
@@ -188,12 +123,12 @@
 
     .shortcut-icon i {
       font-size: 20px;
-      color: var(--text-muted);
+      color: #71717a;
     }
 
     .shortcut-label {
       font-size: 11px;
-      color: var(--text-muted);
+      color: #71717a;
       text-align: center;
       max-width: 60px;
       overflow: hidden;
@@ -202,14 +137,14 @@
     }
 
     .shortcut:hover .shortcut-label {
-      color: var(--text);
+      color: #e4e4e7;
     }
 
     .quote {
       position: fixed;
       bottom: 24px;
       font-size: 13px;
-      color: var(--text-dim);
+      color: #52525b;
       max-width: 400px;
       text-align: center;
     }
@@ -231,8 +166,8 @@
     .spinner {
       width: 32px;
       height: 32px;
-      border: 2px solid var(--border);
-      border-top-color: var(--accent);
+      border: 2px solid #1f1f1f;
+      border-top-color: #ffffff;
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
     }
@@ -277,7 +212,7 @@
     <a class="shortcut" data-url="https://discord.com">
       <div class="shortcut-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg">
       </div>
-      <span class="shortcut-label">D*scord</span>
+      <span class="shortcut-label">Discord</span>
     </a>
     <a class="shortcut" data-url="https://twitter.com">
       <div class="shortcut-icon"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"></div>
@@ -378,9 +313,22 @@
     }
 
     // Quote
-    if (window.QUOTES?.length) {
-      $('#quote').textContent = window.QUOTES[Math.floor(Math.random() * window.QUOTES.length)];
-    }
+    const quotes = [
+    "so tuff",
+    "it is what it is",
+    "do ur work",
+    "this is what happens when u dont touch grass",
+    "FULL BOX",
+    "FULL PIECE",
+    "200!",
+    "press esc + refresh + power button for hacks",
+    "press ctrl+x to hide your screen",
+    "change the tab title and favicon in settings",
+    "TEACHERR!",
+    "lebron lebron lebronn james",
+    "lebron is OUR goat"
+];
+    $('#quote').textContent = quotes[Math.floor(Math.random() * quotes.length)];
 
     renderCustom();
   </script>
