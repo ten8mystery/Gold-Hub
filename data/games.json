@@ -1084,5 +1084,41 @@
     "src": "https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/refs/heads/main/data/local/zones/slope3.html",
     "image": "https://i.ytimg.com/vi/wEAYDFPhvfQ/maxresdefault.jpg",
     "description": "Game Active"
+  },
+  {
+    "name": "Five Nights at Freddy's: World Refreshed",
+    "src": "https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/refs/heads/main/data/local/zones/fnafworldrefreshed.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/704.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Rocket League (Ripoff)",
+    "src": "https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/refs/heads/main/data/local/zones/rocketleague.html",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/ee/RL_Sideswipe_Coverart.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Real Flight Simulator",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/701.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/701.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Doodle Jump",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/470.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/470.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Adventure Capatalist",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/354.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/354.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Binding of Issac: Wrath of the Lamb",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/350.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/350.png",
+    "description": "Game Active"
   }
 ]
