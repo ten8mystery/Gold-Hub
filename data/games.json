@@ -1108,5 +1108,53 @@
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/350.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/350.png",
     "description": "Game Active"
+  },
+  {
+    "name": "Iron Lung",
+    "src": "https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/refs/heads/main/data/local/zones/ironlung.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/705.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Goblin Goopmaxxing",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/655.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/655.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Hobo",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/673.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/673.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Hobo 2",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/674.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/674.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Hobo 3",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/675.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/675.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Hobo 4",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/676.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/676.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Hobo 5",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/677.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/677.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Hobo 6",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/678.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/678.png",
+    "description": "Game Active"
   }
 ]
