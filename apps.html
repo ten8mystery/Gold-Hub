@@ -205,53 +205,58 @@
       box-shadow: 0 0 55px rgba(255,215,120,.75);
     }
 
+    /* --- OVERLAY FIXES --- */
     .iframe-overlay {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,.96);
+      background: rgba(0,0,0,.98);
       z-index: 999;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
     }
 
+    /* Fixed Controls at the Top */
     .iframe-controls {
-      margin-bottom: 14px;
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      gap: 14px;
+      gap: 16px;
+      z-index: 1000;
     }
-
-    #iframeContainer {
-  flex: 1;
-  width: 97%;
-  height: 97%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-#iframeContainer iframe {
-  width: 97%;
-  height: 97%;
-  border: none;
 
     .iframe-controls button {
       background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
       border: none;
-      padding: 10px 20px;
-      border-radius: 16px;
+      padding: 10px 24px;
+      border-radius: 14px;
       font-weight: 800;
       cursor: pointer;
       color: #000;
       box-shadow: 0 0 25px rgba(255,215,120,.45);
+      transition: transform 0.2s ease;
     }
 
-    .iframe-overlay iframe {
-      width: 92%;
-      height: 90%;
-      border: none;
+    .iframe-controls button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Container fills screen below buttons */
+    #iframeContainer {
+      width: 95vw;
+      height: 82vh;
+      margin-top: 60px; /* Space for the top buttons */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #iframeContainer iframe {
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(255,215,120,0.2);
       border-radius: 18px;
       background: #000;
     }
@@ -262,7 +267,6 @@
 
 <body>
 
-<!-- Particles canvas -->
 <canvas id="particles"></canvas>
 
 <header>
@@ -290,9 +294,9 @@
     <button id="closeBtn">Close ✕</button>
     <button id="fullscreenBtn">Fullscreen ⛶</button>
   </div>
-  <iframe id="gameFrame" allow="fullscreen; autoplay; gamepad; pointer-lock"></iframe>
+  <div id="iframeContainer"></div>
 </div>
-<!-- Firebase -->
+
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 
@@ -303,10 +307,12 @@
     databaseURL: "https://goldubgserver-default-rtdb.europe-west1.firebasedatabase.app/",
     projectId: "goldubgserver"
   };
+
   firebase.initializeApp(firebaseConfig);
   const db = firebase.database();
   const connectionsRef = db.ref("connections");
   const connectedRef = db.ref(".info/connected");
+
   connectedRef.on("value", snap => {
     if (snap.val() === true) {
       const con = connectionsRef.push(true);
@@ -319,46 +325,57 @@
 const searchInput = document.getElementById('search');
 const gameList = document.getElementById('gameList');
 const overlay = document.getElementById('iframeOverlay');
-const iframe = document.getElementById('gameFrame');
 const closeBtn = document.getElementById('closeBtn');
 const fullscreenBtn = document.getElementById('fullscreenBtn');
+const iframeContainer = document.getElementById('iframeContainer');
+
+let currentIframe = null;
+
+function createFreshIframe() {
+  iframeContainer.innerHTML = '';
+  const iframe = document.createElement('iframe');
+  // Permissions for modern games
+  iframe.allow = 'autoplay; fullscreen; gamepad; accelerometer; gyroscope; pointer-lock; microphone';
+  iframeContainer.appendChild(iframe);
+  currentIframe = iframe;
+  return iframe;
+}
 
 const priorityGames = [
-  "",
-  "",
-  "",
-  ""
+  "[!] REQUEST GAME",
+  "R0blox",
+  "F0rtnite"
 ];
 
-// Fetch and display games
-fetch('data/apps.json')
+fetch('https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/main/data/apps.json')
   .then(res => res.json())
   .then(data => {
     gameList.innerHTML = '';
 
-    // Sort games: priority first, then alphabetical
     data.sort((a, b) => {
-      const aIndex = priorityGames.indexOf(a.name);
-      const bIndex = priorityGames.indexOf(b.name);
-
-      if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex; // both priority
-      if (aIndex !== -1) return -1; // only a is priority
-      if (bIndex !== -1) return 1;  // only b is priority
-      return a.name.localeCompare(b.name); // neither priority → alphabetical
+      const ai = priorityGames.indexOf(a.name);
+      const bi = priorityGames.indexOf(b.name);
+      if (ai !== -1 && bi !== -1) return ai - bi;
+      if (ai !== -1) return -1;
+      if (bi !== -1) return 1;
+      return a.name.localeCompare(b.name);
     });
 
     data.forEach(game => {
       const card = document.createElement('div');
       card.className = 'game';
       card.dataset.name = game.name;
+
       card.innerHTML = `
         <div class="thumb"><img src="${game.image}" alt="${game.name}"></div>
         <h3>${game.name}</h3>
         <button class="play">Play</button>
       `;
-      const playBtn = card.querySelector('.play');
-      playBtn.addEventListener('click', () => {
-        overlay.style.display = 'flex';
+
+      card.querySelector('.play').addEventListener('click', () => {
+        overlay.style.display = 'flex'; // Uses flex to center content
+        const iframe = createFreshIframe();
+
         fetch(game.src)
           .then(r => r.text())
           .then(html => {
@@ -374,11 +391,11 @@ fetch('data/apps.json')
             doc.close();
           });
       });
+
       gameList.appendChild(card);
     });
   });
 
-// Search functionality
 searchInput.addEventListener('input', () => {
   const q = searchInput.value.toLowerCase();
   document.querySelectorAll('.game').forEach(g => {
@@ -386,27 +403,36 @@ searchInput.addEventListener('input', () => {
   });
 });
 
-// Overlay controls
 closeBtn.onclick = () => {
   overlay.style.display = 'none';
-  iframe.src = '';
-  iframe.srcdoc = '';
+  // Ensure audio stops by clearing src before removing
+  if (currentIframe) {
+    currentIframe.src = 'about:blank';
+  }
+  iframeContainer.innerHTML = '';
+  currentIframe = null;
 };
 
 fullscreenBtn.onclick = () => {
-  if (iframe.requestFullscreen) iframe.requestFullscreen();
+  // Try to fullscreen the iframe directly, fallback to container
+  if (currentIframe) {
+    if (currentIframe.requestFullscreen) {
+      currentIframe.requestFullscreen();
+    } else if (currentIframe.webkitRequestFullscreen) {
+      currentIframe.webkitRequestFullscreen();
+    } else if (iframeContainer.requestFullscreen) {
+      iframeContainer.requestFullscreen();
+    }
+  }
 };
 
+// Close when clicking empty black space (but not buttons)
 overlay.addEventListener('click', e => {
-  if (e.target === overlay) {
-    overlay.style.display = 'none';
-    iframe.src = '';
-    iframe.srcdoc = '';
-  }
+  if (e.target === overlay) closeBtn.onclick();
 });
 </script>
+
 <script>
-// ===== Networked particles with mouse interaction =====
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particlesArray = [];
@@ -414,13 +440,12 @@ const particleCount = 80;
 const lineDistance = 120;
 let mouse = { x: null, y: null };
 
-window.addEventListener('resize', () => {
+function resize() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-});
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
 
 canvas.addEventListener('mousemove', e => {
   mouse.x = e.x;
@@ -439,30 +464,17 @@ class Particle {
     this.size = Math.random() * 2 + 1;
     this.speedX = (Math.random() - 0.5) * 0.5;
     this.speedY = (Math.random() - 0.5) * 0.5;
-    this.color = 'rgba(255,200,90,0.2)';
   }
   update() {
     this.x += this.speedX;
     this.y += this.speedY;
-
     if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
     if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-
-    // Move slightly toward mouse
-    if (mouse.x && mouse.y) {
-      const dx = mouse.x - this.x;
-      const dy = mouse.y - this.y;
-      const dist = Math.sqrt(dx*dx + dy*dy);
-      if (dist < 100) {
-        this.x -= dx*0.005;
-        this.y -= dy*0.005;
-      }
-    }
   }
   draw() {
-    ctx.fillStyle = this.color;
+    ctx.fillStyle = 'rgba(255,200,90,0.25)';
     ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
   }
 }
@@ -472,9 +484,9 @@ function connectParticles() {
     for (let b = a + 1; b < particlesArray.length; b++) {
       const dx = particlesArray[a].x - particlesArray[b].x;
       const dy = particlesArray[a].y - particlesArray[b].y;
-      const distance = Math.sqrt(dx*dx + dy*dy);
-      if (distance < lineDistance) {
-        ctx.strokeStyle = `rgba(255,200,90,${1 - distance/lineDistance} )`;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < lineDistance) {
+        ctx.strokeStyle = `rgba(255,200,90,${1 - dist / lineDistance})`;
         ctx.lineWidth = 0.7;
         ctx.beginPath();
         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -492,18 +504,18 @@ function initParticles() {
   }
 }
 
-function animateParticles() {
+function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   particlesArray.forEach(p => {
     p.update();
     p.draw();
   });
   connectParticles();
-  requestAnimationFrame(animateParticles);
+  requestAnimationFrame(animate);
 }
 
 initParticles();
-animateParticles();
+animate();
 </script>
 
 </body>
