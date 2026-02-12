@@ -1180,5 +1180,35 @@
     "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/192.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/192.png",
     "description": "Game Active"
+  },
+  {
+    "name": "Survivor.io",
+    "src": "https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/refs/heads/main/data/local/zones/survivorio.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/709.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Territorial.io",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/303.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/303.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Fortzone",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/120.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/120.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Spacebar Clicker",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/473.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/473.png",
+    "description": "Game Active"
+  },
+  {
+    "name": "Slime.io",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/327.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/327.png",
+    "description": "Game Active"
   }
 ]
