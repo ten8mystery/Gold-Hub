@@ -1222,5 +1222,11 @@
     "src": "https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/refs/heads/main/data/local/zones/hotlinemiami.html",
     "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/217.png",
     "description": "Game Active"
+  },
+  {
+    "name": "Silent Hill",
+    "src": "https://cdn.jsdelivr.net/gh/gn-math/html@main/713.html",
+    "image": "https://cdn.jsdelivr.net/gh/gn-math/covers@main/713.png",
+    "description": "Game Active"
   }
 ]
