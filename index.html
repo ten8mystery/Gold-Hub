@@ -319,10 +319,9 @@
 </section>
 
 <footer>
-  © 2026 Ore Gaming. All rights reserved.
+  Vertex Gold is peak yall right
 </footer>
 
-<!-- Firebase -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 
@@ -341,7 +340,6 @@
   const connectedRef = db.ref(".info/connected");
   const playersCountEl = document.getElementById("players-count");
 
-  // Track connection
   connectedRef.on("value", snap => {
     if (snap.val() === true) {
       const con = connectionsRef.push(true);
@@ -349,7 +347,6 @@
     }
   });
 
-  // Count active connections
   connectionsRef.on("value", snap => {
     playersCountEl.textContent = snap.numChildren();
   });
@@ -373,7 +370,6 @@
   }
 </script>
 <script>
-// ===== Networked particles with mouse interaction =====
 const canvas = document.getElementById("particles");
 const ctx = canvas.getContext("2d");
 let particlesArray = [];
@@ -472,7 +468,6 @@ function animateParticles() {
 initParticles();
 animateParticles();
 
-// ===== Popup close functionality =====
 const popup = document.getElementById("popup-overlay");
 document.getElementById("popup-close").onclick = () => {
   popup.style.display = "none";
