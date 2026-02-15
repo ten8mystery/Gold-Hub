@@ -26,7 +26,6 @@
       position: relative;
     }
 
-    /* Particles canvas */
     #particles {
       position: fixed;
       top: 0;
@@ -37,7 +36,6 @@
       pointer-events: none;
     }
 
-    /* Content above particles */
     header, .section, .iframe-overlay {
       position: relative;
       z-index: 1;
@@ -243,11 +241,10 @@
       transform: scale(1.05);
     }
 
-    /* Container fills screen below buttons */
     #iframeContainer {
       width: 95vw;
       height: 90vh;
-      margin-top: 60px; /* Space for the top buttons */
+      margin-top: 60px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -334,7 +331,6 @@ let currentIframe = null;
 function createFreshIframe() {
   iframeContainer.innerHTML = '';
   const iframe = document.createElement('iframe');
-  // Permissions for modern games
   iframe.allow = 'autoplay; fullscreen; gamepad; accelerometer; gyroscope; pointer-lock; microphone';
   iframeContainer.appendChild(iframe);
   currentIframe = iframe;
@@ -373,7 +369,7 @@ fetch('https://raw.githubusercontent.com/ten8mystery/Vertex-Gold/main/data/apps.
       `;
 
       card.querySelector('.play').addEventListener('click', () => {
-        overlay.style.display = 'flex'; // Uses flex to center content
+        overlay.style.display = 'flex'; 
         const iframe = createFreshIframe();
 
         fetch(game.src)
@@ -405,7 +401,6 @@ searchInput.addEventListener('input', () => {
 
 closeBtn.onclick = () => {
   overlay.style.display = 'none';
-  // Ensure audio stops by clearing src before removing
   if (currentIframe) {
     currentIframe.src = 'about:blank';
   }
@@ -414,7 +409,6 @@ closeBtn.onclick = () => {
 };
 
 fullscreenBtn.onclick = () => {
-  // Try to fullscreen the iframe directly, fallback to container
   if (currentIframe) {
     if (currentIframe.requestFullscreen) {
       currentIframe.requestFullscreen();
@@ -426,7 +420,6 @@ fullscreenBtn.onclick = () => {
   }
 };
 
-// Close when clicking empty black space (but not buttons)
 overlay.addEventListener('click', e => {
   if (e.target === overlay) closeBtn.onclick();
 });
